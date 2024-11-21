@@ -3,8 +3,12 @@
     "apps": [],
     "details": [
       {
-        "appIDs": ["5S2NTX8YT9.io.tr3zor.dapp"],
-        "paths": ["/register/"]
+        "appIDs": [
+          "2DR68G3KTP.sa.com.webook"
+        ],
+        "paths": [
+          "/venue"
+        ]
       }
     ]
   }
