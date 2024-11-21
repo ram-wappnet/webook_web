@@ -1,0 +1,38 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "sa.com.webook",
+            "sha256_cert_fingerprints": [
+                "4A:3F:CC:7D:DA:28:4B:A6:F9:9C:09:40:66:7A:2D:39:2A:55:80:F7:64:17:F5:34:72:23:80:F9:C4:80:70:93"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "sa.com.webook",
+            "sha256_cert_fingerprints": [
+                "43:3A:3E:B4:DC:28:18:73:D0:93:55:46:47:81:19:BB:09:82:A8:54:7C:5F:4E:67:E2:ED:35:28:86:86:25:E2"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "sa.com.webook",
+            "sha256_cert_fingerprints": [
+                "C9:4A:E4:EB:71:68:C2:AB:8B:F7:AF:8C:08:54:3B:B7:01:38:CD:06:18:D0:FE:D0:54:93:89:7A:DE:64:4A:E9"
+            ]
+        }
+    }
+]
