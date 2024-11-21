@@ -7,36 +7,51 @@
 body,
 html {
     height: 100%;
+    width: 100%;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background: linear-gradient(45deg, #111, #333);
+    color: #fff;
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
     animation: fadeIn 1.5s ease-in-out forwards;
+    position: relative;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-top: 20px;
-    color: #333;
+    color: #fff;
     font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    animation: textGlow 1.5s ease-in-out infinite alternate;
 }
 
 p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
+    color: #ddd;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.4);
+    animation: textAppear 2s 1s forwards;
 }
 
 .logo img {
-    width: 100px;
+    width: 120px;
+    /* Set the width to a fixed value */
     height: auto;
-    color: #333;
+    /* Maintain the aspect ratio */
     border-radius: 50%;
+    /* Keep the circular shape */
+    object-fit: contain;
+    /* Ensure the logo fits within the container without being cropped */
     opacity: 0;
+    transform: scale(0);
     animation: logoAppear 2s ease-in-out forwards, hoverEffect 0.4s ease-out infinite alternate;
 }
 
@@ -50,34 +65,18 @@ p {
     }
 }
 
-@keyframes logoAppear {
+@keyframes textGlow {
     0% {
-        opacity: 0;
-        transform: translateY(-50px);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
     }
 
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
     }
-}
-
-@keyframes hoverEffect {
-    0% {
-        transform: scale(1);
-        filter: brightness(1);
-    }
-
-    100% {
-        transform: scale(1.1);
-        filter: brightness(1.2);
-    }
-}
-
-h1,
-p {
-    opacity: 0;
-    animation: textAppear 2s 1s forwards;
 }
 
 @keyframes textAppear {
@@ -89,5 +88,29 @@ p {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes logoAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes hoverEffect {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+        filter: brightness(1.3);
     }
 }
